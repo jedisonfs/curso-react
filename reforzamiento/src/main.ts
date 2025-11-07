@@ -1,5 +1,5 @@
 import './style.css'
-import './bases/04-arrays.ts'
+import './bases/08-interfaces-enumeraciones.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
