@@ -8,7 +8,7 @@ export interface Hero {
   owner: Owner;
 }
 
-enum Owner {
+export enum Owner {
   DC,
   Marvel
 }
