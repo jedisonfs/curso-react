@@ -33,7 +33,10 @@ export const getHeroByOwner = (ownerParam:Owner): Hero[] => {
 };*/
  
 // Funcion  GetHeroByOwner utilizando funcion fecha
+/*
 export const getHeroByOwner = (owner:Owner): Hero[] => {
     const newArray: Hero[] = heroes.filter( hero => hero.owner === owner); 
     return newArray;
-};
+};*/
+
+export const getHeroByOwner = (owner:Owner): Hero[] =>  heroes.filter( hero => hero.owner === owner);
