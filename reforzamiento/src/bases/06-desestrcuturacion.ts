@@ -8,7 +8,7 @@ const person = {
 //const age = person.age;
 //const key = person.key;
 
-const {name:iromanname, age, key} = person;
+//const {name:iromanname, age, key} = person;
 //console.log(name, age, key);
 
 
@@ -38,7 +38,4 @@ const context = userContext(person);
 
 /// PRimero saco el rango y luego el keyname y extraer el nombre
 
-const {rank, 
-    keyName,
-     user: {name:namecontext}
-    } = userContext(person);
+const {rank, keyName, user: {name:namecontext}} = userContext(person);

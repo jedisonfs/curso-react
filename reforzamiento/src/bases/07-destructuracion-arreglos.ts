@@ -7,9 +7,15 @@ const [,,trunks] = characterName; // NO es comun usar esta sintaxis
 console.log({ trunks });
 
 const returnArrayFn = () => {
+    // as const 
     return ['ABC', 123] as const // Se dice que son const que es primero un numero y luego un letra
 }
 
+// DE esta forma no sabe typescript si es una letra o numero
+// Esto no es type safe - no es seguro porque no sabe cuales es number y string
+// Con as const -> No es tupa 
+// as const -> LE dice a type script SIEMPRE va arreglesar ese orden primero string y number
+// es un tipo de tipado escrito que debe cumplir y cuando utiliza la vairbale letras siempre sera letras y number siempre numeros
 const [ letras, numeros] = returnArrayFn();
 
 console.log(numeros + 100);
