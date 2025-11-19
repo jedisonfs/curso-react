@@ -31,3 +31,14 @@ const getRandomGifUrl = async () => {
 getRandomGifUrl().then(url => createImageInsideDOM(url))
 .catch(err => {throw new Error(`¡No se encontro alguna respuesta del Gifphy Developer ${err}`)})
 .finally(() => console.log('SE termino el flujo de asycn - await'));
+
+/**
+ * La palabra await solo se usa dentro de un afuncion await 
+ * sirve para esperar de forma no bloqueante a que una promesa se complete
+ * simplificando la escritura de codigo asincrono
+ * esto dice que nos ahorra el then( () => response.() .....) que tocaria usar de una promesa normal o clasica
+ * podemos obtener la respuesta de una forma mas rapida y sencilla en codigo 
+ * 
+ * +
+ * then( (response) => response.json())
+ */
