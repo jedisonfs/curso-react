@@ -1,23 +1,30 @@
 interface Props {
-    nameConsole: string;
-    quantity?: number
+  nameConsole: string;
+  quantity?: number
 };
 
 const ItemCounter = ({ nameConsole, quantity }: Props) => {
+
+  const handleClick = () => {
+    console.log({ nameConsole });
+  }
+
   return (
     <section style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 10
+      display: 'flex',
+      alignItems: 'center',
+      gap: 10
     }}
     >
-        <span
-         style={{
-            width: 150
+      <span
+        style={{
+          width: 150
         }}>{nameConsole}</span>
-        <button>+1</button> 
-        <span>{quantity}</span>
-        <button>-1</button>
+      <button
+        onClick={handleClick}
+      >+1</button>
+      <span>{quantity}</span>
+      <button>-1</button>
     </section>
   );
 };
