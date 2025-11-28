@@ -11,6 +11,6 @@ createRoot(document.getElementById('root')!).render(
   */
 
   <StrictMode> {/*modo estricto de react para que se puedan detectar errores cuando se recarga la pagina*/}
-    <MyAwesomeApp /> {/* Los framentos en react son capatilizados de esta forma funciona */}
+    <FirstStepApp /> {/* Los framentos en react son capatilizados de esta forma funciona */}
   </StrictMode>,
 )

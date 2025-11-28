@@ -1,14 +1,12 @@
+import ItemCounter from "./shopping-car/ItemCounter";
+
 export function FirstStepApp() {
     return (
         <>
-            <h1>Hola Mundo</h1>
-            <p>Esto es un parrafo</p>
-
-            <button>Click me</button>
-
-            <div>
-                <h2>Hola Dentro de un div</h2>
-            </div>
+            <h1>Carritos de Compras</h1>
+            <ItemCounter nameConsole="Nintendo Switch" quantity={2}/>
+            <ItemCounter nameConsole="Pro Controller" quantity={4}/>
+            <ItemCounter nameConsole="Super Smash" quantity={3}/>
         </>
     );
 }
