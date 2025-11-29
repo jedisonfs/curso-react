@@ -25,9 +25,9 @@ const ItemCounter = ({ nameConsole, quantity = 1 }: Props) => {
   }
 
 
-  const handleClick = () => {
-    console.log({ nameConsole });
-  }
+  // const handleClick = () => {
+  //   console.log({ nameConsole });
+  // }
 
   return (
     <section style={{
@@ -41,7 +41,11 @@ const ItemCounter = ({ nameConsole, quantity = 1 }: Props) => {
           width: 150
         }}>{nameConsole}</span>
       <button
-        onClick={handleAdd}
+        // onClick={handleAdd} // Como metodo referencia que recibe un para metro del onClick
+        onClick={() => {
+          if(count === 10)
+          setCount(count+1);
+        }}
       >+1</button>
       <span>{count}</span>
       <button onClick={handleSubtract}>-1</button>
