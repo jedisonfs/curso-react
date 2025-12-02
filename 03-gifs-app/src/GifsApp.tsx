@@ -3,6 +3,12 @@ import CustomHeader from './shared/components/CustomHeader';
 import SearchBar from "./shared/components/SearcheBar";
 import PreviousSearches from "./gifs/PreviousSearches";
 import GifsList from "./gifs/GifsList";
+import { useState } from "react";
+
+const [previousTerm, setPreviousTerm] = useState(["dragon ball z"]);
+const handleTermClick = (term: string) => {
+    console.log(term);
+};
 
 const GifsApp = () => {
     return (
@@ -16,7 +22,9 @@ const GifsApp = () => {
             <SearchBar />
 
             {/* Busquedas previas*/}
-            <PreviousSearches searches={["Goku", "Dragon Ball Z"]} />
+            <PreviousSearches
+                searches={previousTerm}
+                onLabelClick={handleTermClick} />
 
             {/* Gifs */}
             <GifsList gifs={mockGifs} />
