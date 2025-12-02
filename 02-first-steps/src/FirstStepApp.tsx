@@ -17,7 +17,7 @@ export function FirstStepApp() {
             <h1>Carritos de Compras</h1>
 
             {
-                itemsInCart.map(({ productName, quantity }) => (
+                itemsInCart.map(({ productName, quantity }) => ( // los parentesis () son para revolver directamente el componente
                     <ItemCounter key={productName} nameConsole={productName} quantity={quantity} />
                 ))
             }
