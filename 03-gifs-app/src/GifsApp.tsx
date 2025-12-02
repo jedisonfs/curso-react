@@ -6,9 +6,14 @@ import GifsList from "./gifs/GifsList";
 import { useState } from "react";
 
 const [previousTerm, setPreviousTerm] = useState(["dragon ball z"]);
+
 const handleTermClick = (term: string) => {
     console.log(term);
 };
+
+const handleSearch = (query: string) => {
+    console.log(query);
+}
 
 const GifsApp = () => {
     return (
@@ -19,7 +24,9 @@ const GifsApp = () => {
                 description="Descubre y comparte el gif" />
 
             {/* Searche */}
-            <SearchBar />
+            <SearchBar
+                placeholder="Busca lo que quieras"
+                onQuery={(query: string) => handleSearch(query)} />
 
             {/* Busquedas previas*/}
             <PreviousSearches
