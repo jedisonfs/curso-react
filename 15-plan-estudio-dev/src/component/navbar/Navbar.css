@@ -1,0 +1,63 @@
+/* Contenedor principal de la barra */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #242424; /* Color oscuro moderno */
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilo del Logo o Título */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #646cff; /* Color morado estilo Vite/React */
+    cursor: pointer;
+}
+
+/* Lista de enlaces */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Espacio entre botones */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo base de los enlaces (NavLink) */
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+/* Efecto al pasar el mouse */
+.nav-links a:hover {
+    color: #646cff;
+}
+
+/* Clase que React Router añade automáticamente al link activo */
+.nav-links a.active {
+    color: #646cff;
+    border-bottom: 2px solid #646cff;
+}
+
+/* Responsive: Se adapta a móviles */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
