@@ -15,7 +15,7 @@ const CustomSeacherBar = ({ placeholder = 'Buscar', onClick }: Props) => {
                     type="text"
                     placeholder={placeholder}
 
-                    onChange={(event => setQuery)} />
+                    onChange={(event => setQuery(event.target.value))} /> {/*Evento que realiza un cambio cuando se realiza un click en el imput*/}
                 <button>Buscar</button>
             </div>
         </>
