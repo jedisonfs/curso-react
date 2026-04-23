@@ -24,7 +24,15 @@ export const Navbar = () => {
                 </li>
                 <li>
                     <NavLink
-                        to="/Fase 1 - Monolito"
+                        to="/pre-fase leetcode"
+                        className={({ isActive }) => isActive ? 'active' : ''}
+                    >
+                        Pre-Fase leetcode
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/Fase 1 - Monolito "
                         className={({ isActive }) => isActive ? 'active' : ''}
                     >
                         Fase 1 - Monolito
